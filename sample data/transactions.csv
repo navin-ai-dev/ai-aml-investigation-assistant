@@ -1,0 +1,7 @@
+CustomerID,Amount,Country,TransactionType
+C101,50000,UK,Deposit
+C101,48000,UK,Deposit
+C101,49000,UK,Deposit
+C101,150000,UAE,Transfer
+C102,2000,India,Deposit
+C103,250000,Russia,Transfer

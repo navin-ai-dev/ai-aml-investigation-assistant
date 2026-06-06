@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+venv/
+aml_cases.db
+.streamlit/secrets.toml
+.env

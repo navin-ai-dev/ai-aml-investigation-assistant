@@ -1,0 +1,34 @@
+# agents/compliance_agent.py
+
+def compliance_check(df):
+
+    findings = []
+
+    sanctioned_countries = [
+        "North Korea",
+        "Iran",
+        "Russia"
+    ]
+
+    high_risk_countries = [
+        "Russia",
+        "UAE",
+        "Iran"
+    ]
+
+    if len(df[df["Country"].isin(sanctioned_countries)]) > 0:
+        findings.append(
+            "?? Sanctioned Country Activity Found"
+        )
+
+    if len(df[df["Country"].isin(high_risk_countries)]) > 0:
+        findings.append(
+            "?? High Risk Geography Detected"
+        )
+
+    if len(df[df["Amount"] > 200000]) > 0:
+        findings.append(
+            "?? Large Transaction Regulatory Review Required"
+        )
+
+    return findings
